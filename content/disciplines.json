@@ -1,0 +1,47 @@
+[
+  {
+    "slug": "chess",
+    "title": "Chess",
+    "shortDescription": "Practical chess education built around decisions, plans and honest improvement.",
+    "status": "active",
+    "publishedWorkCount": 1,
+    "showInFilters": true,
+    "showInNavigation": false,
+    "landingPage": "https://radanyachess.com/",
+    "externalDomain": "radanyachess.com"
+  },
+  {
+    "slug": "learning-products",
+    "title": "Learning Products",
+    "shortDescription": "Interactive course systems that turn dense material into immediate practice.",
+    "status": "active",
+    "publishedWorkCount": 1,
+    "showInFilters": true,
+    "showInNavigation": false,
+    "landingPage": null,
+    "externalDomain": null
+  },
+  {
+    "slug": "client-work",
+    "title": "Client Work",
+    "shortDescription": "Selected client work appears only after publication approval.",
+    "status": "incubating",
+    "publishedWorkCount": 0,
+    "showInFilters": false,
+    "showInNavigation": false,
+    "landingPage": null,
+    "externalDomain": null
+  },
+  {
+    "slug": "music",
+    "title": "Music",
+    "shortDescription": "Original releases will appear after the first finished track.",
+    "status": "incubating",
+    "publishedWorkCount": 0,
+    "showInFilters": false,
+    "showInNavigation": false,
+    "landingPage": null,
+    "externalDomain": null
+  }
+]
+

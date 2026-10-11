@@ -1,0 +1,16 @@
+{
+  "mailerlite": {
+    "enabled": false,
+    "formAction": "",
+    "groups": ["radchess", "build-notes", "product-launches"]
+  },
+  "tally": {
+    "enabled": false,
+    "embedUrl": ""
+  },
+  "cloudflareAnalytics": {
+    "enabled": false,
+    "token": ""
+  }
+}
+

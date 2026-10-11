@@ -1,0 +1,73 @@
+[
+  {
+    "id": "fide-rapid-current-2026-10",
+    "category": "chess",
+    "title": "FIDE Rapid",
+    "value": "2005",
+    "unit": "rating",
+    "context": "Current FIDE Rapid rating shown on the official profile",
+    "date": "2026-10-12",
+    "verifiedAt": "2026-10-12",
+    "source": {"label": "FIDE profile 54191556", "url": "https://ratings.fide.com/profile/54191556"},
+    "backupEvidence": null,
+    "status": "verified",
+    "featured": true
+  },
+  {
+    "id": "fide-rapid-peak-2025-09",
+    "category": "chess",
+    "title": "Peak FIDE Rapid",
+    "value": "2045",
+    "unit": "rating",
+    "context": "Highest published FIDE Rapid rating in the official progress history",
+    "date": "2025-09",
+    "verifiedAt": "2026-10-12",
+    "source": {"label": "FIDE rating history", "url": "https://ratings.fide.com/profile/54191556"},
+    "backupEvidence": null,
+    "status": "verified",
+    "featured": true
+  },
+  {
+    "id": "learning-system-shipped-2026",
+    "category": "product",
+    "title": "Reusable course system shipped",
+    "value": "1",
+    "unit": "system",
+    "context": "A public course engine with protected delivery and automated publication gates",
+    "date": "2026-08-13",
+    "verifiedAt": "2026-10-12",
+    "source": {"label": "View project repository", "url": "https://github.com/tropical-penguins/course-kit"},
+    "backupEvidence": null,
+    "status": "verified",
+    "featured": true
+  },
+  {
+    "id": "fide-blitz-current-2026-10",
+    "category": "chess",
+    "title": "FIDE Blitz",
+    "value": "1926",
+    "unit": "rating",
+    "context": "Current FIDE Blitz rating shown on the official profile",
+    "date": "2026-10-12",
+    "verifiedAt": "2026-10-12",
+    "source": {"label": "FIDE profile 54191556", "url": "https://ratings.fide.com/profile/54191556"},
+    "backupEvidence": null,
+    "status": "verified",
+    "featured": false
+  },
+  {
+    "id": "fide-blitz-peak-2024-12",
+    "category": "chess",
+    "title": "Peak FIDE Blitz",
+    "value": "2020",
+    "unit": "rating",
+    "context": "Highest published FIDE Blitz rating in the official progress history",
+    "date": "2024-12",
+    "verifiedAt": "2026-10-12",
+    "source": {"label": "FIDE rating history", "url": "https://ratings.fide.com/profile/54191556"},
+    "backupEvidence": null,
+    "status": "verified",
+    "featured": false
+  }
+]
+

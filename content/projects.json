@@ -1,0 +1,40 @@
+[
+  {
+    "slug": "radchess",
+    "title": "RadChess",
+    "discipline": "chess",
+    "date": "2026-10-12",
+    "summary": "An English chess education brand for ambitious 800–1600 players, built around the decision process before the move.",
+    "role": "Creator, instructor and product designer",
+    "status": "published",
+    "publicPermission": true,
+    "featured": true,
+    "image": "assets/radchess-threat-scan.jpg",
+    "liveUrl": "https://radanyachess.com/",
+    "cta": "Visit RadChess",
+    "outcome": "A connected content system spanning videos, interactive practice and the 30-Second Threat Scan.",
+    "proofs": [
+      {"label": "YouTube channel", "url": "https://www.youtube.com/@radchessyt", "type": "live-product"},
+      {"label": "FIDE profile", "url": "https://ratings.fide.com/profile/54191556", "type": "official-record"}
+    ]
+  },
+  {
+    "slug": "protected-learning-course-system",
+    "title": "Protected Learning Course System",
+    "discipline": "learning-products",
+    "date": "2026-08-13",
+    "summary": "A reusable course engine for paid study products: immediate practice, server-held answer keys, device controls and publication gates.",
+    "role": "Product architecture, implementation and quality system",
+    "status": "published",
+    "publicPermission": true,
+    "featured": true,
+    "image": null,
+    "liveUrl": "https://github.com/tropical-penguins/course-kit",
+    "cta": "View the system",
+    "outcome": "A dependency-free learning interface backed by a protected delivery layer and automated checks that prevent paid content leaks.",
+    "proofs": [
+      {"label": "Source repository", "url": "https://github.com/tropical-penguins/course-kit", "type": "repository"}
+    ]
+  }
+]
+
