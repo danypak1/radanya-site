@@ -104,14 +104,17 @@ for path in DIST.rglob("*") if DIST.exists() else []:
         if re.search(r"TODO|REPLACE_ME|YOUR_[A-Z_]", text): fail(f"placeholder in {path.relative_to(DIST)}")
         if path.suffix == ".html":
             if '<link rel="canonical"' not in text: fail(f"canonical missing: {path.relative_to(DIST)}")
-            for asset in re.findall(r'(?:src|href)="(/assets/(?:styles\.css|app\.js))([^"]*)"', text):
+            for asset in re.findall(r'(?:src|href)="/?(assets/(?:styles\.css|app\.js))([^"]*)"', text):
                 if "?v=" not in asset[1]: fail(f"cache version missing in {path.relative_to(DIST)}: {asset[0]}")
-            for link in re.findall(r'(?:src|href)="(/[^"]*)"', text):
-                clean = link.split("?",1)[0]
-                if clean.startswith("/assets/"):
-                    target = DIST / clean.lstrip("/")
+            for link in re.findall(r'(?:src|href)="([^"]*)"', text):
+                parsed = urlparse(link)
+                if parsed.scheme or parsed.netloc or link.startswith(("#", "mailto:")):
+                    continue
+                clean = parsed.path.lstrip("/")
+                if clean.startswith("assets/"):
+                    target = DIST / clean
                 elif clean.endswith("/"):
-                    target = DIST / clean.lstrip("/") / "index.html"
+                    target = DIST / clean / "index.html" if clean else DIST / "index.html"
                 else:
                     continue
                 if not target.exists(): fail(f"broken local link {clean} in {path.relative_to(DIST)}")

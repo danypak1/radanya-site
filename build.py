@@ -11,6 +11,7 @@ STATIC = ROOT / "static"
 DIST = ROOT / "dist"
 VERSION = "20261012.2"
 SITE = "https://radanya.com"
+GITHUB_PAGES_PATH = "/radanya-site/"
 
 
 def load(name):
@@ -39,13 +40,15 @@ def layout(title, description, body, path="/", extra_head=""):
     cf = integrations["cloudflareAnalytics"]
     if cf["enabled"]:
         analytics = f'<script defer src="https://static.cloudflareinsights.com/beacon.min.js" data-cf-beacon=\'{{"token":"{esc(cf["token"])}"}}\'></script>'
-    return f'''<!doctype html>
+    page = f'''<!doctype html>
 <html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<base id="site-base" href="&#47;"><script>if(location.hostname.endsWith(".github.io"))document.getElementById("site-base").setAttribute("href","{GITHUB_PAGES_PATH}");</script>
 <title>{esc(title)}</title><meta name="description" content="{esc(description)}"><link rel="canonical" href="{canonical}">
 <meta property="og:title" content="{esc(title)}"><meta property="og:description" content="{esc(description)}"><meta property="og:type" content="website"><meta property="og:url" content="{canonical}"><meta property="og:image" content="{SITE}/assets/og.jpg">
 <meta name="theme-color" content="#132a25"><link rel="icon" href="/assets/favicon.svg" type="image/svg+xml"><link rel="stylesheet" href="/assets/styles.css?v={VERSION}">{extra_head}{analytics}</head>
 <body><a class="skip" href="#main">Skip to content</a><header class="site-header"><div class="wrap header-inner"><a class="brand" href="/"><span>D</span> Daniil Pak</a><button class="menu-button" data-menu-button aria-label="Open navigation" aria-expanded="false">☰</button><nav data-nav><a href="/work/">Work</a><a href="/about/">About</a><a href="/services/">Services</a><a href="/notes/">Notes</a><a class="nav-cta" href="/start/">Start a project</a></nav></div></header>
 <main id="main">{body}</main><footer class="footer"><div class="wrap footer-grid"><div><div class="kicker">Useful things, built clearly.</div><p>Educational products, chess and whatever earns its place next.</p></div><div><a href="mailto:hello@radanya.com">hello@radanya.com</a><br><a href="/privacy/">Privacy</a></div></div></footer><script src="/assets/app.js?v={VERSION}" defer></script></body></html>'''
+    return page.replace('href="/', 'href="').replace('src="/', 'src="')
 
 
 def write_page(path, content):
